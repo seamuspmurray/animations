@@ -87,17 +87,7 @@
       sixth.release();
     });
 
-  seventh = new freezeframe('.my_class_seventh').capture().setup();
 
-    $('.start_seventh').click(function(e) {
-      e.preventDefault();
-      seventh.trigger();
-    });
-
-    $('.stop_seventh').click(function(e) {
-      e.preventDefault();
-      seventh.release();
-    });
   })
 </script>
 
