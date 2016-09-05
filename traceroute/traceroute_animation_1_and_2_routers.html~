@@ -422,9 +422,14 @@ Note: there is no delay in any of the packets passing <strong>through</strong> r
 
 </div>
 <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-<button class="start_seventh">start</button><button class="stop_seventh">stop</button>7a
+
 <div style="width: 800px;" > 
 <img class="my_class_seventh freezeframe-responsive" src="images/traceroute-arrows.gif" width="800px" >
+<button class="start_seventh">start</button><button class="stop_seventh">stop</button>7a
+<div style="margin-top: 10px; display: inline-block;" >
+<img src="images/key.png" >
+</div><br>
+
 </div>
 
 </div>
