@@ -87,7 +87,17 @@
       sixth.release();
     });
 
+  seventh = new freezeframe('.my_class_seventh').capture().setup();
 
+    $('.start_seventh').click(function(e) {
+      e.preventDefault();
+      seventh.trigger();
+    });
+
+    $('.stop_seventh').click(function(e) {
+      e.preventDefault();
+      seventh.release();
+    });
   })
 </script>
 
@@ -412,8 +422,11 @@ Note: there is no delay in any of the packets passing <strong>through</strong> r
 
 </div>
 <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-<img class="my_class_seventh freezeframe-responsive" src="images/traceroute-arrows.gif" >
-<button class="start_seventh">start</button><button class="stop_seventh">stop</button>6a
+<button class="start_seventh">start</button><button class="stop_seventh">stop</button>7a
+<div style="width: 800px;" > 
+<img class="my_class_seventh freezeframe-responsive" src="images/traceroute-arrows.gif" width="800px" >
+</div>
+
 </div>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Traceroute Animations</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Seamus Murray</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
