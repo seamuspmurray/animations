@@ -425,10 +425,11 @@ Note: there is no delay in any of the packets passing <strong>through</strong> r
 
 <div style="width: 800px;" > 
 <img class="my_class_seventh freezeframe-responsive" src="images/traceroute-arrows.gif" width="800px" >
+<br>
 <button class="start_seventh">start</button><button class="stop_seventh">stop</button>7a
-<div style="margin-top: 10px; display: inline-block;" >
-<img src="images/key.png" >
-</div><br>
+
+<img src="images/key-full.png" width="800px" >
+
 
 </div>
 
