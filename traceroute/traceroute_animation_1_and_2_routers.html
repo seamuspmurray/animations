@@ -98,6 +98,44 @@
       e.preventDefault();
       seventh.release();
     });
+
+  eighth = new freezeframe('.my_class_eighth').capture().setup();
+
+    $('.start_eighth').click(function(e) {
+      e.preventDefault();
+      eighth.trigger();
+    });
+
+    $('.stop_eighth').click(function(e) {
+      e.preventDefault();
+      eighth.release();
+    });
+
+  nineth = new freezeframe('.my_class_nineth').capture().setup();
+
+    $('.start_nineth').click(function(e) {
+      e.preventDefault();
+      nineth.trigger();
+    });
+
+    $('.stop_nineth').click(function(e) {
+      e.preventDefault();
+      nineth.release();
+    });
+
+
+  infinite_loop = new freezeframe('.my_class_infinite_loop').capture().setup();
+
+    $('.start_infinite_loop').click(function(e) {
+      e.preventDefault();
+      infinite_loop.trigger();
+    });
+
+    $('.stop_infinite_loop').click(function(e) {
+      e.preventDefault();
+      infinite_loop.release();
+    });
+
   })
 </script>
 
@@ -165,8 +203,45 @@ div[name=screen]{
 </head>
 <body>
 
-The purpose of this presentation is to clarify/correct some of the common misconceptions about traceroute and its related tools.<br>
-LastUpdate 2016 05 10  23:12 by Seamus Murray
+The purpose of this presentation is to clarify soem of the concepts and also to correct some of the common misconceptions about traceroute and its related tools.<br>
+LastUpdate 2016 11 21  23:48 by Seamus Murray
+
+
+
+
+
+
+
+
+
+<div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+<img class="my_class_eighth freezeframe-responsive" src="images/reason_for_ttl-loop-all-good.gif" >
+<br><br>
+<button class="start_eighth">start</button><button class="stop_eighth">stop</button>8a
+</div>
+
+
+<div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+<img class="my_class_infinite_loop freezeframe-responsive" src="images/reason_for_ttl-loop-ttl-exceeded-with-labels-what-happens-without-ttl.gif" >
+<br><br>
+<button class="start_infinite_loop">start</button><button class="stop_infinite_loop">stop</button>11a
+</div>
+
+
+<div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+<img class="my_class_nineth freezeframe-responsive" src="images/reason_for_ttl-loop-ttl-exceeded-with-labels.gif" >
+<br><br>
+<button class="start_nineth">start</button><button class="stop_nineth">stop</button>9a
+</div>
+
+
+<div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+<img class="my_class_seventh freezeframe-responsive" src="images/traceroute-arrows.gif"  >
+<br><br>
+<button class="start_seventh">start</button><button class="stop_seventh">stop</button>7a
+<img src="images/key-full.png" width="960"  >
+</div>
+
 
 <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
 In This example a packet is routed / passed though the router.
@@ -418,22 +493,9 @@ c:\> tracert 10.10.10.10<br>
 </div><br>
 
 Note: there is no delay in any of the packets passing <strong>through</strong> router 1.
-
-
 </div>
-<div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
 
 
-<img class="my_class_seventh freezeframe-responsive" src="images/traceroute-arrows.gif"  >
-<br><br>
-<button class="start_seventh">start</button><button class="stop_seventh">stop</button>7a
-
-<img src="images/key-full.png" width="960"  >
-
-
-
-
-</div>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Traceroute Animations</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Seamus Murray</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 </body>
