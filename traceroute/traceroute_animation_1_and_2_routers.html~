@@ -15,6 +15,20 @@
   $(function() {
 
 
+
+    all_good_no_ttl_shown = new freezeframe('.my_class_all_good_no_ttl_shown').capture().setup();
+
+    $('.start_all_good_no_ttl_shown').click(function(e) {
+      e.preventDefault();
+      all_good_no_ttl_shown.trigger();
+    });
+
+    $('.stop_all_good_no_ttl_shown').click(function(e) {
+      e.preventDefault();
+      all_good_no_ttl_shown.release();
+    });
+
+
     first = new freezeframe('.my_class_first').capture().setup();
 
     $('.start_first').click(function(e) {
@@ -128,12 +142,12 @@
 
     $('.start_infinite_loop').click(function(e) {
       e.preventDefault();
-      nineth.trigger();
+      infinite_loop.trigger();
     });
 
     $('.stop_infinite_loop').click(function(e) {
       e.preventDefault();
-      nineth.release();
+      infinite_loop.release();
     });
 
   })
@@ -208,11 +222,15 @@ LastUpdate 2016 11 21  23:48 by Seamus Murray
 
 
 
+<div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+<img class="my_class_all_good_no_ttl_shown freezeframe-responsive" src="images/reason_for_ttl-loop-all-good-no-ttl-shown.gif" >
+<br><br>
+<button class="start_all_good_no_ttl_shown">start</button><button class="stop_all_good_no_ttl_shown">stop</button>1a
+</div>
 
 
 
-
-
+<!--  this animation is not nesesary for the story
 
 <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
 <img class="my_class_eighth freezeframe-responsive" src="images/reason_for_ttl-loop-all-good.gif" >
@@ -220,7 +238,7 @@ LastUpdate 2016 11 21  23:48 by Seamus Murray
 <button class="start_eighth">start</button><button class="stop_eighth">stop</button>8a
 </div>
 
-
+-->
 <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
 <img class="my_class_infinite_loop freezeframe-responsive" src="images/reason_for_ttl-loop-ttl-exceeded-with-labels-what-happens-without-ttl.gif" >
 <br><br>
