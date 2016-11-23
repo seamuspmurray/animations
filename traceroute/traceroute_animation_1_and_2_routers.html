@@ -150,7 +150,24 @@
       infinite_loop.release();
     });
 
+
+  divergent_paths = new freezeframe('.my_class_divergent_paths').capture().setup();
+
+    $('.start_divergent_paths').click(function(e) {
+      e.preventDefault();
+      divergent_paths.trigger();
+    });
+
+    $('.stop_divergent_paths').click(function(e) {
+      e.preventDefault();
+      divergent_paths.release();
+    });
+
+
   })
+
+
+
 </script>
 
 <style type="text/css">
@@ -512,6 +529,13 @@ c:\> tracert 10.10.10.10<br>
 
 Note: there is no delay in any of the packets passing <strong>through</strong> router 1.
 </div>
+
+<div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+<img class="my_class_divergent_paths freezeframe-responsive" src="images/divergent-paths-slow.gif" >
+<br><br>
+<button class="start_divergent_paths">start</button><button class="stop_divergent_paths">stop</button>divergent paths
+</div>
+
 
 
 

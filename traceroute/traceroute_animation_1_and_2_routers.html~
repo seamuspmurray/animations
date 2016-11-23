@@ -150,7 +150,12 @@
       infinite_loop.release();
     });
 
+
+
   })
+
+
+
 </script>
 
 <style type="text/css">
@@ -218,7 +223,7 @@ div[name=screen]{
 <body>
 
 The purpose of this presentation is to clarify soem of the concepts and also to correct some of the common misconceptions about traceroute and its related tools.<br>
-LastUpdate 2016 11 21  23:48 by Seamus Murray
+LastUpdate 2016 11 23  20:00 by Seamus Murray
 
 
 
@@ -512,6 +517,8 @@ c:\> tracert 10.10.10.10<br>
 
 Note: there is no delay in any of the packets passing <strong>through</strong> router 1.
 </div>
+
+
 
 
 
