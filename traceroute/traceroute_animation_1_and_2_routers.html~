@@ -533,14 +533,19 @@ Note: there is no delay in any of the packets passing <strong>through</strong> r
 <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
 <img src="images/traceroute-crt-term.png" width="500">
 <button class="start_divergent_paths">start</button><button class="stop_divergent_paths">stop</button>divergent paths
-<img class="my_class_divergent_paths freezeframe-responsive" src="images/divergent-paths-traceroute-with-crt.gif" >
 <img class="my_class_divergent_paths freezeframe-responsive" src="images/divergent-paths-traceroute-with-crt-round-corners.gif" >
 <br><br>
 
 
 </div>
 
+<div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+<img src="images/summary-of-divergent-paths-animation.png" width="950">
 
+<br><br>
+
+
+</div>
 
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Traceroute Animations</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Seamus Murray</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
