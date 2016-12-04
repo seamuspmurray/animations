@@ -16,6 +16,19 @@
 
 
 
+    all_good_good_just_hosts = new freezeframe('.my_class_all_good_good_just_hosts').capture().setup();
+
+    $('.start_all_good_good_just_hosts').click(function(e) {
+      e.preventDefault();
+      all_good_good_just_hosts.trigger();
+    });
+
+    $('.stop_all_good_good_just_hosts').click(function(e) {
+      e.preventDefault();
+      all_good_good_just_hosts.release();
+    });
+
+
     all_good_no_ttl_shown = new freezeframe('.my_class_all_good_no_ttl_shown').capture().setup();
 
     $('.start_all_good_no_ttl_shown').click(function(e) {
@@ -28,6 +41,19 @@
       all_good_no_ttl_shown.release();
     });
 
+
+
+    reason_for_ttl_traceroute = new freezeframe('.my_class_reason_for_ttl_traceroute').capture().setup();
+
+    $('.start_reason_for_ttl_traceroute').click(function(e) {
+      e.preventDefault();
+      reason_for_ttl_traceroute.trigger();
+    });
+
+    $('.stop_reason_for_ttl_traceroute').click(function(e) {
+      e.preventDefault();
+      reason_for_ttl_traceroute.release();
+    });
 
     first = new freezeframe('.my_class_first').capture().setup();
 
@@ -234,15 +260,24 @@ div[name=screen]{
 </head>
 <body>
 
-The purpose of this presentation is to clarify soem of the concepts and also to correct some of the common misconceptions about traceroute and its related tools.<br>
-LastUpdate 2016 11 23  20:00 by Seamus Murray
-
+The purpose of this presentation is to clarify some of the concepts and also to correct some of the common misconceptions about traceroute and its related tools.<br>
+LastUpdate 2016 12 05  00:15 by Seamus Murray
 
 
 <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-<img class="my_class_all_good_no_ttl_shown freezeframe-responsive" src="images/reason_for_ttl-loop-all-good-no-ttl-shown.gif" >
-<br><br>
-<button class="start_all_good_no_ttl_shown">start</button><button class="stop_all_good_no_ttl_shown">stop</button>1a
+<img class="my_class_all_good_good_just_hosts freezeframe-responsive" src="images/reason_for_ttl_all_good_good_just_hosts.gif" >
+<br><br>There are 2 hosts..<br> 
+On the left we have 192.168.0.10<br>
+On the right we have 10.10.0.10<br>
+
+<button class="start_all_good_good_just_hosts">start</button><button class="stop_all_good_good_just_hosts">stop</button>1a
+</div>
+
+
+<div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+<img class="my_class_all_good_no_ttl_shown freezeframe-responsive" src="images/reason_for_ttl-loop-all-good-no-routetable.gif" >
+<br><br>In this example we have 2 routers between the 2 hosts.<br>
+<button class="start_all_good_no_ttl_shown">start</button><button class="stop_all_good_no_ttl_shown">stop</button>2a
 </div>
 
 
@@ -250,27 +285,49 @@ LastUpdate 2016 11 23  20:00 by Seamus Murray
 
 
 <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-<img class="my_class_eighth freezeframe-responsive" src="images/reason_for_ttl-loop-all-good.gif" >
-<br><br>
-<button class="start_eighth">start</button><button class="stop_eighth">stop</button>8a
+<img class="my_class_eighth freezeframe-responsive" src="images/reason_for_ttl-loop-all-good-no-ttl-shown.gif" >
+<br><br>Each node on a TCP/IP network uses Route tables to determine the direction in with to send/forward packets<br>
+In the following examples we use some very simple route tables.<br>
+The 2 hosts only have a single route entry each<br>
+The 2 routers have just 2 route entries each<br>
+<button class="start_eighth">start</button><button class="stop_eighth">stop</button>3a
 </div>
 
 
 <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
 <img class="my_class_infinite_loop freezeframe-responsive" src="images/reason_for_ttl-loop-ttl-exceeded-with-labels-what-happens-without-ttl.gif" >
 <br><br>
-<button class="start_infinite_loop">start</button><button class="stop_infinite_loop">stop</button>11a
+In this example router A has a route entry that states that traffic destined to the 10.10.0.0 network should be sent to Router B. <br>
+However router B has a route entry that states that traffic destined to the 10.10.0.0 network should be sent to Router A. <br>
+<button class="start_infinite_loop">start</button><button class="stop_infinite_loop">stop</button>4a
 </div>
 
 
 <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
 <img class="my_class_nineth freezeframe-responsive" src="images/reason_for_ttl-loop-ttl-exceeded-with-labels.gif" >
-<br><br>
-<button class="start_nineth">start</button><button class="stop_nineth">stop</button>9a
+<br><br>To prevent packets from being forwarded indefinitely, each packet is assigned a TTL by the source node that generates the packet, each time the packet is forwarded though router the value of the TTL is decremented by 1.<br>
+Routers will not forward packets if their TTL has expired, ideally routers should send a message back to the source host notifying it that the TTL was exceeded. This message is sent in an ICMP TTL Exceeded packet.<br>
+<button class="start_nineth">start</button><button class="stop_nineth">stop</button>5a
+</div>
+
+<div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+<img class="my_class_reason_for_ttl_traceroute freezeframe-responsive" src="images/reason_for_ttl_traceroute.gif" >
+<br><br>Traceroute artificially sets the TTL on the outgoing packets so that the TLL will be exceeded on the intermediary routers.<br>
+Traceroute then uses the ICMP TTL Exceeded messages to determine the routers IP address.<br>
+The latency displayed in traceroute is the time difference between when it sent out a particular packet and it receives the ICMP TTL Exceeded message for that particular packet.<br>
+<button class="start_reason_for_ttl_traceroute">start</button><button class="stop_reason_for_ttl_traceroute">stop</button>6a
+<div name="screen">
+c:\> tracert 10.10.10.10<br>
+1 &nbsp 192.168.0.1 &nbsp 2.0 ms <br>
+2 &nbsp 10.10.10.1 &nbsp &nbsp4.0 ms<br>
+3 &nbsp 10.10.10.10 &nbsp 6.0 ms<br>
+</div><br>
 </div>
 
 
+
 <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+This is an overview of what just happened in the previous animation.
 <img class="my_class_seventh freezeframe-responsive" src="images/traceroute-arrows.gif"  >
 <br><br>
 <button class="start_seventh">start</button><button class="stop_seventh">stop</button>7a
@@ -394,7 +451,7 @@ c:\> tracert 10.10.10.10<br>
 
 
 <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-In this example router drops expired packets but still routes the non exired packets...
+In this example router drops expired packets but still routes the non expired packets...
 <ol>
 <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.10.10</li>
 <li>The 1st packet arrives at the router 1 with a destination of 10.10.10.10</li>
