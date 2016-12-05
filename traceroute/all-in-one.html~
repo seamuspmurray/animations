@@ -263,7 +263,18 @@ div[name=screen]{
 The purpose of this presentation is to clarify some of the concepts and also to correct some of the common misconceptions about traceroute and its related tools.<br>
 LastUpdate 2016 12 05  00:15 by Seamus Murray
 
-
+<ol>
+<li>Routers and Route Tables</li>
+<li>Time to Live aka Hop Count</li>
+<li>How traceroute utilises the TTL and ICMP TTL Exceeded messages to determine the path to a remote network node.</li>
+<li>3 common types of traceroute</li>
+<li>The primary function of routers</li>
+<li>Secondary functions of routers</li>
+<li>Limitations of routers</li>
+<li>Priorities of routers</li>
+<li>How the limitations and priorities of routers affect the outputs/reports displayed in traceroute tools</li>
+<li>Routing Paths: divergent paths, asymmetric paths,</li>
+</ol>
 <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
 <img class="my_class_all_good_good_just_hosts freezeframe-responsive" src="images/reason_for_ttl_all_good_good_just_hosts.gif" >
 <br><br>There are 2 hosts..<br> 
