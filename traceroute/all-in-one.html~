@@ -367,10 +367,10 @@
         <button class="start_reason_for_ttl_traceroute">start</button>
         <button class="stop_reason_for_ttl_traceroute">stop</button>6a
         <div name="screen">
-            c:\> tracert 10.10.10.10
+            $> traceroute 10.10.0.10
             <br> 1 &nbsp 192.168.0.1 &nbsp 2.0 ms
             <br> 2 &nbsp 10.10.10.1 &nbsp &nbsp4.0 ms
-            <br> 3 &nbsp 10.10.10.10 &nbsp 6.0 ms
+            <br> 3 &nbsp 10.10.0.10 &nbsp &nbsp 6.0 ms
             <br>
         </div>
         <br>
@@ -396,10 +396,10 @@
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
         In This example a packet is routed / passed though the router.
         <ol>
-            <li>The source computer 192.168.0.10 generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.10.10</li>
-            <li>The packet arrives at the router with a destination of 10.10.10.10</li>
+            <li>The source computer 192.168.0.10 generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.0.10</li>
+            <li>The packet arrives at the router with a destination of 10.10.0.10</li>
             <li>The router decrements the TTL by 1</li>
-            <li>The router forwards the packet to the destination computer 10.10.10.10</li>
+            <li>The router forwards the packet to the destination computer 10.10.0.10</li>
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
 
@@ -415,10 +415,10 @@
 
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-        In this example the computer on the left is performing a traceroute to the computer on the right (10.10.10.10)..
+        In this example the computer on the left is performing a traceroute to the computer on the right (10.10.0.10)..
         <ol>
-            <li>The source computer 192.168.0.10 generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.10.10</li>
-            <li>The packet arrives at the router with a destination of 10.10.10.10 </li>
+            <li>The source computer 192.168.0.10 generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.0.10</li>
+            <li>The packet arrives at the router with a destination of 10.10.0.10 </li>
             <li>The router decrements the TTL by 1</li>
             <li>The packet has now expired on the router</li>
             <li>The router generates an ICMP Time-to-Live Exceeded (Type 11), TTL equal 0 during transit (Code 0) message</li>
@@ -428,23 +428,23 @@
                 <br>
             </li>
 
-            <li>The source computer generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.10.10</li>
-            <li>The 2nd packet arrives at the router 1 with a destination of 10.10.10.10 </li>
+            <li>The source computer generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.0.10</li>
+            <li>The 2nd packet arrives at the router 1 with a destination of 10.10.0.10 </li>
             <li>Router 1 decrements the TTL by 1</li>
-            <li>Router 1 forwards the packet to the computer on the right (10.10.10.10)
+            <li>Router 1 forwards the packet to the computer on the right (10.10.0.10)
                 <br>
                 <br>
             </li>
 
-            <li>The computer on the right (10.10.10.10) sends the reply to the source computer.</li>
+            <li>The computer on the right (10.10.0.10) sends the reply to the source computer.</li>
         </ol>
         <img class="my_class_second freezeframe-responsive" src="images/1_router_ideal_situation.gif">
         <button class="start_second">start</button>
         <button class="stop_second">stop</button>2
         <div name="screen">
-            c:\> tracert 10.10.10.10
-            <br> 1 &nbsp 192.168.0.1 &nbsp 10 ms
-            <br> 2 &nbsp 10.10.10.10 &nbsp 20 ms
+            $> traceroute 10.10.0.10
+            <br> 1 &nbsp 192.168.0.1 &nbsp 2.0 ms
+            <br> 2 &nbsp 10.10.0.10 &nbsp &nbsp4.0 ms
             <br>
         </div>
     </div>
@@ -455,8 +455,8 @@
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
         In this example we have 2 routers between the source computer and the destination computer.
         <ol>
-            <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.10.10</li>
-            <li>The 1st packet arrives at the router 1 with a destination of 10.10.10.10</li>
+            <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.0.10</li>
+            <li>The 1st packet arrives at the router 1 with a destination of 10.10.0.10</li>
             <li>Router 1 decrements the TTL by 1</li>
             <li>The 1st packet has now expired on router 1</li>
             <li>Router 1 generates an ICMP Time-to-Live Exceeded (Type 11), TTL equal 0 during transit (Code 0)</li>
@@ -466,8 +466,8 @@
                 <br>
             </li>
 
-            <li>The source computer generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.10.10</li>
-            <li>The 2nd packet arrives at the router 1 with a destination of 10.10.10.10 </li>
+            <li>The source computer generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.0.10</li>
+            <li>The 2nd packet arrives at the router 1 with a destination of 10.10.0.10 </li>
             <li>Router 1 decrements the TTL by 1</li>
             <li>Router 1 forwards the packet to router 2</li>
             <li>Router 2 decrements the TTL by 1</li>
@@ -479,18 +479,18 @@
                 <br>
             </li>
 
-            <li>The source computer generates and sends a packet with the TTL set to 3 and a destination IP address of 10.10.10.10</li>
-            <li>The 3rd packet arrives at router 1, TTL -1, forwarded to router 2, TTL -1, forwarded to destination computer 10.10.10.10</li>
+            <li>The source computer generates and sends a packet with the TTL set to 3 and a destination IP address of 10.10.0.10</li>
+            <li>The 3rd packet arrives at router 1, TTL -1, forwarded to router 2, TTL -1, forwarded to destination computer 10.10.0.10</li>
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
-        <img class="my_class_third freezeframe-responsive" src="images/2-routers-ideal-stuation.gif">
+        <img class="my_class_third freezeframe-responsive" src="images/2-routers-ideal-situation.gif">
         <button class="start_third">start</button>
         <button class="stop_third">stop</button>3
         <div name="screen">
-            c:\> tracert 10.10.10.10
+            $> traceroute 10.10.0.10
             <br> 1 &nbsp 192.168.0.1 &nbsp 2.0 ms
             <br> 2 &nbsp 10.10.10.1 &nbsp &nbsp5.0 ms
-            <br> 3 &nbsp 10.10.10.10 &nbsp 7.5 ms
+            <br> 3 &nbsp 10.10.0.10 &nbsp &nbsp7.5 ms
             <br>
         </div>
     </div>
@@ -503,13 +503,13 @@
         <br> Each packet that is sent though router 1 is delayed.
         <br> The traceroute results are similar to the previous example except for the value of the router 1 delay is added to each query.
         <br>
-        <img class="my_class_fourth freezeframe-responsive" src="images/1_router_delay_due_to_slow_fastplane.gif">
+        <img class="my_class_fourth freezeframe-responsive" src="images/1_router_slow_fastplane.gif">
         <button class="start_fourth">start</button>
         <button class="stop_fourth">stop</button>4a
         <div name="screen">
-            c:\> tracert 10.10.10.10
-            <br> 1 &nbsp 192.168.0.1 &nbsp 15 ms
-            <br> 2 &nbsp 10.10.10.10 &nbsp 30 ms
+            $> traceroute 10.10.0.10
+            <br> 1 &nbsp 192.168.0.1 &nbsp &nbsp15 ms
+            <br> 2 &nbsp 10.10.0.10 &nbsp &nbsp 30 ms
             <br>
         </div>
     </div>
@@ -526,10 +526,10 @@
         <button class="start_fourth">start</button>
         <button class="stop_fourth">stop</button>4b
         <div name="screen">
-            c:\> tracert 10.10.10.10
-            <br> 1 &nbsp 192.168.0.1 &nbsp 5.0 ms
-            <br> 2 &nbsp 10.10.10.1 &nbsp &nbsp6.0 ms
-            <br> 3 &nbsp 10.10.10.10 &nbsp 7.5 ms
+            $> traceroute 10.10.0.10
+            <br> 1 &nbsp 192.168.0.1 &nbsp 12.0 ms
+            <br> 2 &nbsp 10.10.10.1 &nbsp &nbsp14.0 ms
+            <br> 3 &nbsp 10.10.0.10 &nbsp &nbsp16.0 ms
             <br>
         </div>
     </div>
@@ -540,8 +540,8 @@
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
         In this example router drops expired packets but still routes the non expired packets...
         <ol>
-            <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.10.10</li>
-            <li>The 1st packet arrives at the router 1 with a destination of 10.10.10.10</li>
+            <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.0.10</li>
+            <li>The 1st packet arrives at the router 1 with a destination of 10.10.0.10</li>
             <li>Router 1 decrements the TTL by 1</li>
             <li>The 1st packet has now expired on router 1</li>
             <li>The control plane of Router 1 is too busy to generate and send an ICMP Time-to-Live Exceeded</li>
@@ -551,10 +551,10 @@
                 <br>
             </li>
 
-            <li>The source computer generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.10.10</li>
-            <li>The 2nd packet arrives at the router 1 with a destination of 10.10.10.10 </li>
+            <li>The source computer generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.0.10</li>
+            <li>The 2nd packet arrives at the router 1 with a destination of 10.10.0.10 </li>
             <li>Router 1 decrements the TTL by 1</li>
-            <li>Router 1 forwards the packet to computer 10.10.10.10
+            <li>Router 1 forwards the packet to computer 10.10.0.10
                 <br>
                 <br>
             </li>
@@ -565,9 +565,9 @@
         <button class="start_fifth">start</button>
         <button class="stop_fifth">stop</button>5a
         <div name="screen">
-            c:\> tracert 10.10.10.10
+            $> traceroute 10.10.0.10
             <br> 1 &nbsp *
-            <br> 2 &nbsp 10.10.10.10 &nbsp 20 ms
+            <br> 2 &nbsp 10.10.0.10 &nbsp &nbsp 20 ms
         </div>
         <br> Note: there is no delay in any of the packets passing <strong>through</strong> router 1.
     </div>
@@ -578,8 +578,8 @@
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
         In this example router 1 drops expired packets...
         <ol>
-            <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.10.10</li>
-            <li>The 1st packet arrives at the router 1 with a destination of 10.10.10.10</li>
+            <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.0.10</li>
+            <li>The 1st packet arrives at the router 1 with a destination of 10.10.0.10</li>
             <li>Router 1 decrements the TTL by 1</li>
             <li>The 1st packet has now expired on router 1</li>
             <li>The control plane of Router 1 is too busy to generate and send an ICMP Time-to-Live Exceeded</li>
@@ -589,8 +589,8 @@
                 <br>
             </li>
 
-            <li>The source computer generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.10.10</li>
-            <li>The 2nd packet arrives at the router 1 with a destination of 10.10.10.10 </li>
+            <li>The source computer generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.0.10</li>
+            <li>The 2nd packet arrives at the router 1 with a destination of 10.10.0.10 </li>
             <li>Router 1 decrements the TTL by 1</li>
             <li>Router 1 forwards the packet to router 2</li>
             <li>Router 2 decrements the TTL by 1</li>
@@ -602,18 +602,18 @@
                 <br>
             </li>
 
-            <li>The source computer generates and sends a packet with the TTL set to 3 and a destination IP address of 10.10.10.10</li>
-            <li>The 3rd packet arrives at router 1, TTL -1, forwarded to router 2, TTL -1, forwarded to destination computer 10.10.10.10</li>
+            <li>The source computer generates and sends a packet with the TTL set to 3 and a destination IP address of 10.10.0.10</li>
+            <li>The 3rd packet arrives at router 1, TTL -1, forwarded to router 2, TTL -1, forwarded to destination computer 10.10.0.10</li>
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
         <img class="my_class_fifth freezeframe-responsive" src="images/2-routers-dropped-response.gif">
         <button class="start_fifth">start</button>
         <button class="stop_fifth">stop</button>5b
         <div name="screen">
-            c:\> tracert 10.10.10.10
+            $> traceroute 10.10.0.10
             <br> 1 &nbsp *
-            <br> 2 &nbsp 10.10.10.1 &nbsp &nbsp5.0 ms
-            <br> 3 &nbsp 10.10.10.10 &nbsp 7.5 ms
+            <br> 2 &nbsp 10.10.10.1 &nbsp &nbsp 5.0 ms
+            <br> 3 &nbsp 10.10.0.10 &nbsp &nbsp7.5 ms
             <br>
         </div>
         <br> Note: there is no delay in any of the packets passing <strong>through</strong> router 1.
@@ -625,8 +625,8 @@
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
         In this example there is a delay before the router can generate the ICMP Time-to-Live Exceeded message...
         <ol>
-            <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.10.10</li>
-            <li>The 1st packet arrives at the router 1 with a destination of 10.10.10.10</li>
+            <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.0.10</li>
+            <li>The 1st packet arrives at the router 1 with a destination of 10.10.0.10</li>
             <li>Router 1 decrements the TTL by 1</li>
             <li>The 1st packet has now expired on router 1</li>
             <li>The control plane of Router 1 is busy and there is a delay while it completes other tasks (updating route tables, compressing log files etc..)</li>
@@ -637,10 +637,10 @@
                 <br>
             </li>
 
-            <li>The source computer generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.10.10</li>
-            <li>The 2nd packet arrives at the router 1 with a destination of 10.10.10.10 </li>
+            <li>The source computer generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.0.10</li>
+            <li>The 2nd packet arrives at the router 1 with a destination of 10.10.0.10 </li>
             <li>Router 1 decrements the TTL by 1</li>
-            <li>Router 1 forwards the packet to computer 10.10.10.10
+            <li>Router 1 forwards the packet to computer 10.10.0.10
                 <br>
                 <br>
             </li>
@@ -651,9 +651,9 @@
         <button class="start_sixth">start</button>
         <button class="stop_sixth">stop</button>6a
         <div name="screen">
-            c:\> tracert 10.10.10.10
-            <br> 1 &nbsp 192.168.0.1 &nbsp 30 ms
-            <br> 2 &nbsp 10.10.10.10 &nbsp 20 ms
+            $> traceroute 10.10.0.10
+            <br> 1 &nbsp 192.168.0.1 &nbsp &nbsp30 ms
+            <br> 2 &nbsp 10.10.0.10 &nbsp &nbsp 20 ms
             <br>
         </div>
         <br> Note: there is no delay in any of the packets passing <strong>through</strong> router 1.
@@ -665,8 +665,8 @@
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
         In this example ..2-routers-delay-response.gif
         <ol>
-            <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.10.10</li>
-            <li>The 1st packet arrives at the router 1 with a destination of 10.10.10.10</li>
+            <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.0.10</li>
+            <li>The 1st packet arrives at the router 1 with a destination of 10.10.0.10</li>
             <li>Router 1 decrements the TTL by 1</li>
             <li>The 1st packet has now expired on router 1</li>
             <li>The control plane of Router 1 is busy and there is a delay while it completes other tasks (updating route tables, compressing log files etc..)</li>
@@ -677,8 +677,8 @@
                 <br>
             </li>
 
-            <li>The source computer generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.10.10</li>
-            <li>The 2nd packet arrives at the router 1 with a destination of 10.10.10.10 </li>
+            <li>The source computer generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.0.10</li>
+            <li>The 2nd packet arrives at the router 1 with a destination of 10.10.0.10 </li>
             <li>Router 1 decrements the TTL by 1</li>
             <li>Router 1 forwards the packet to router 2</li>
             <li>Router 2 decrements the TTL by 1</li>
@@ -690,18 +690,18 @@
                 <br>
             </li>
 
-            <li>The source computer generates and sends a packet with the TTL set to 3 and a destination IP address of 10.10.10.10</li>
-            <li>The 3rd packet arrives at router 1, TTL -1, forwarded to router 2, TTL -1, forwarded to destination computer 10.10.10.10</li>
+            <li>The source computer generates and sends a packet with the TTL set to 3 and a destination IP address of 10.10.0.10</li>
+            <li>The 3rd packet arrives at router 1, TTL -1, forwarded to router 2, TTL -1, forwarded to destination computer 10.10.0.10</li>
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
         <img class="my_class_sixth freezeframe-responsive" src="images/2-routers-delay-response.gif">
         <button class="start_sixth">start</button>
         <button class="stop_sixth">stop</button>6b
         <div name="screen">
-            c:\> tracert 10.10.10.10
-            <br> 1 &nbsp 192.168.0.1 &nbsp 7.0 ms
+            $> traceroute 10.10.0.10
+            <br> 1 &nbsp 192.168.0.1 &nbsp &nbsp7.0 ms
             <br> 2 &nbsp 10.10.10.1 &nbsp &nbsp 5.0 ms
-            <br> 3 &nbsp 10.10.10.10 &nbsp 7.5 ms
+            <br> 3 &nbsp 10.10.0.10 &nbsp &nbsp 7.5 ms
             <br>
         </div>
         <br> Note: there is no delay in any of the packets passing <strong>through</strong> router 1.
