@@ -254,9 +254,9 @@
     <br> TODO
     <br> Create a static diagram that shows that routers have more than one IP address.
     <br>Use it of some one asks. To aid the clarity and to fit the presentation into the allotted time frame I had to take some liberties with omitting various elements that were not directly relevant to the messages that I am attempting to covey
-    <br> change colour of envelopes
     <br> Create some static slides to use at the end of the session to give an overview of what was covered.
-
+    <p></p>
+     
     <br> Introduction
 
     <br> The purpose of this presentation is to clarify some of the concepts and also to correct some of the common misconceptions about traceroute and its related tools.
@@ -298,12 +298,7 @@
         <button class="stop_all_good_good_just_hosts">stop</button>1a
     </div>
 
-      <video width="900" height="250" controls>
-        <source src="videos/reason_for_ttl-all-good-just-hosts.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-      </video> 
-
-
+    
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
         <img class="my_class_all_good_no_ttl_shown freezeframe-responsive" src="images/reason_for_ttl-loop-all-good-no-routetable.gif">
         <br>
@@ -663,7 +658,7 @@
 
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-        In this example ..2-routers-delay-response.gif
+        In this example .
         <ol>
             <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.0.10</li>
             <li>The 1st packet arrives at the router 1 with a destination of 10.10.0.10</li>
@@ -694,7 +689,7 @@
             <li>The 3rd packet arrives at router 1, TTL -1, forwarded to router 2, TTL -1, forwarded to destination computer 10.10.0.10</li>
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
-        <img class="my_class_sixth freezeframe-responsive" src="images/2-routers-delay-response.gif">
+        <img class="my_class_sixth freezeframe-responsive" src="images/2-routers-delayed-by-first-router.gif">
         <button class="start_sixth">start</button>
         <button class="stop_sixth">stop</button>6b
         <div name="screen">
