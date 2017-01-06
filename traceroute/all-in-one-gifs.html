@@ -290,26 +290,25 @@
 
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
-      <source type="video/mp4" src="videos/reason_for_ttl-all-good-just-two-hosts-no-routers.mp4" />
-    </video>
+        <img class="my_class_all_good_good_just_hosts freezeframe-responsive" src="images/reason_for_ttl_all_good_good_just_hosts.gif">
         <br>
         <br>There are 2 hosts..
         <br> On the left we have 192.168.0.10
         <br> On the right we have 10.10.0.10
         <br>
+
+        <button class="start_all_good_good_just_hosts">start</button>
+        <button class="stop_all_good_good_just_hosts">stop</button>1a
     </div>
 
     
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
-      <source type="video/mp4" src="videos/reason_for_ttl-all-good-two-hosts-two-routers-no-routetable.mp4" />
-    </video>
+        <img class="my_class_all_good_no_ttl_shown freezeframe-responsive" src="images/reason_for_ttl-loop-all-good-no-routetable.gif">
         <br>
         <br>In this example we have 2 routers between the 2 hosts.
         <br>
+        <button class="start_all_good_no_ttl_shown">start</button>
+        <button class="stop_all_good_no_ttl_shown">stop</button>2a
     </div>
 
 
@@ -317,64 +316,59 @@
 
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
-      <source type="video/mp4" src="videos/reason_for_ttl-all-good-two-hosts-two-routers-with-routetables.mp4" />
-    </video>
+        <img class="my_class_eighth freezeframe-responsive" src="images/reason_for_ttl-loop-all-good-no-ttl-shown.gif">
         <br>
         <br>Each node on a TCP/IP network uses Route tables to determine the direction in with to send/forward packets
         <br> In the following examples we use some very simple route tables.
         <br> The 2 hosts only have a single route entry each
         <br> The 2 routers have just 2 route entries each
         <br>
+        <button class="start_eighth">start</button>
+        <button class="stop_eighth">stop</button>3a
     </div>
 
 
 
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
-      <source type="video/mp4" src="videos/reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables-icmp-ttl-exceeded.mp4" />
-    </video>
+        <img class="my_class_infinite_loop freezeframe-responsive" src="images/reason_for_ttl-loop-ttl-exceeded-with-labels-what-happens-without-ttl.gif">
         <br>
         <br> In this example router A has a route entry that states that traffic destined to the 10.10.0.0 network should be sent to Router B.
         <br> However router B has a route entry that states that traffic destined to the 10.10.0.0 network should be sent to Router A.
         <br>
+        <button class="start_infinite_loop">start</button>
+        <button class="stop_infinite_loop">stop</button>4a
     </div>
 
 
 
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
-      <source type="video/mp4" src="videos/reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables-icmp-ttl-exceeded.mp4" />
-    </video>
+        <img class="my_class_nineth freezeframe-responsive" src="images/reason_for_ttl-loop-ttl-exceeded-with-labels.gif">
         <br>
         <br>To prevent packets from being forwarded indefinitely, each packet is assigned a TTL by the source node that generates the packet, each time the packet is forwarded though router the value of the TTL is decremented by 1.
         <br> Routers will not forward packets if their TTL has expired, ideally routers should send a message back to the source host notifying it that the TTL was exceeded. This message is sent in an ICMP TTL Exceeded packet.
         <br>
-
+        <button class="start_nineth">start</button>
+        <button class="stop_nineth">stop</button>5a
     </div>
 
 
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-
-    <video class="afterglow" id="myvideo" width="900" height="500" data-skin="light">
-      <source type="video/mp4" src="videos/reason_for_ttl_traceroute_ttl_all_3.mp4" />
-    </video>
+        <img class="my_class_reason_for_ttl_traceroute freezeframe-responsive" src="images/reason_for_ttl_traceroute.gif">
         <br>
         <br>Traceroute artificially sets the TTL on the outgoing packets so that the TLL will be exceeded on the intermediary routers.
         <br> Traceroute then uses the ICMP TTL Exceeded messages to determine the routers IP address.
         <br> The latency displayed in traceroute is the time difference between when it sent out a particular packet and it receives the ICMP TTL Exceeded message for that particular packet.
         <br>
+        <button class="start_reason_for_ttl_traceroute">start</button>
+        <button class="stop_reason_for_ttl_traceroute">stop</button>6a
         <div name="screen">
             $> traceroute 10.10.0.10
             <br> 1 &nbsp 192.168.0.1 &nbsp 2.0 ms
             <br> 2 &nbsp 10.10.10.1 &nbsp &nbsp4.0 ms
-            <br> 3 &nbsp 10.10.0.10 &nbsp &nbsp6.0 ms
+            <br> 3 &nbsp 10.10.0.10 &nbsp &nbsp 6.0 ms
             <br>
         </div>
         <br>
@@ -385,11 +379,7 @@
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
         This is an overview of what just happened in the previous animation.
-
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
-      <source type="video/mp4" src="videos/traceroute-arrows.mp4" />
-    </video>
-        
+        <img class="my_class_seventh freezeframe-responsive" src="images/traceroute-arrows.gif">
         <br>
         <br>
         <button class="start_seventh">start</button>
@@ -411,13 +401,12 @@
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
 
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
-      <source type="video/mp4" src="videos/1_router_pass_through.mp4" />
-    </video>
 
+        <img class="my_class_first freezeframe-responsive" src="images/1_router_pass_through.gif">
         <br>
         <br>
-
+        <button class="start_first">start</button>
+        <button class="stop_first">stop</button>1
     </div>
 
 
@@ -447,10 +436,9 @@
 
             <li>The computer on the right (10.10.0.10) sends the reply to the source computer.</li>
         </ol>
-        
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
-      <source type="video/mp4" src="videos/1_router_ideal_situation.mp4" />
-    </video>
+        <img class="my_class_second freezeframe-responsive" src="images/1_router_ideal_situation.gif">
+        <button class="start_second">start</button>
+        <button class="stop_second">stop</button>2
         <div name="screen">
             $> traceroute 10.10.0.10
             <br> 1 &nbsp 192.168.0.1 &nbsp 2.0 ms
@@ -493,14 +481,14 @@
             <li>The 3rd packet arrives at router 1, TTL -1, forwarded to router 2, TTL -1, forwarded to destination computer 10.10.0.10</li>
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
-      <source type="video/mp4" src="videos/2-routers-ideal-situation.mp4" />
-    </video>
+        <img class="my_class_third freezeframe-responsive" src="images/2-routers-ideal-situation.gif">
+        <button class="start_third">start</button>
+        <button class="stop_third">stop</button>3
         <div name="screen">
             $> traceroute 10.10.0.10
             <br> 1 &nbsp 192.168.0.1 &nbsp 2.0 ms
-            <br> 2 &nbsp 10.10.10.1 &nbsp &nbsp4.0 ms
-            <br> 3 &nbsp 10.10.0.10 &nbsp &nbsp6.0 ms
+            <br> 2 &nbsp 10.10.10.1 &nbsp &nbsp5.0 ms
+            <br> 3 &nbsp 10.10.0.10 &nbsp &nbsp7.5 ms
             <br>
         </div>
     </div>
@@ -513,14 +501,13 @@
         <br> Each packet that is sent though router 1 is delayed.
         <br> The traceroute results are similar to the previous example except for the value of the router 1 delay is added to each query.
         <br>
-
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
-      <source type="video/mp4" src="videos/1_router_slow_fastplane.mp4" />
-    </video>
+        <img class="my_class_fourth freezeframe-responsive" src="images/1_router_slow_fastplane.gif">
+        <button class="start_fourth">start</button>
+        <button class="stop_fourth">stop</button>4a
         <div name="screen">
             $> traceroute 10.10.0.10
-            <br> 1 &nbsp 192.168.0.1 &nbsp &nbsp15.0 ms
-            <br> 2 &nbsp 10.10.0.10 &nbsp &nbsp 17.0 ms
+            <br> 1 &nbsp 192.168.0.1 &nbsp &nbsp15 ms
+            <br> 2 &nbsp 10.10.0.10 &nbsp &nbsp 30 ms
             <br>
         </div>
     </div>
@@ -533,9 +520,9 @@
         <br> Each packet that is sent though router 1 is delayed.
         <br> The traceroute results are similar to the previous example except for the value of the router 1 delay is added to each query.
         <br>
-    <video class="afterglow" id="myvideo" width="100%"  data-skin="light">
-      <source type="video/mp4" src="videos/2-routers-latency-induced-by-the-fast-plane-of-first-router.mp4" />
-    </video>
+        <img class="my_class_fourth freezeframe-responsive" src="images/2-routers-latency-induced-by-first-hop.gif">
+        <button class="start_fourth">start</button>
+        <button class="stop_fourth">stop</button>4b
         <div name="screen">
             $> traceroute 10.10.0.10
             <br> 1 &nbsp 192.168.0.1 &nbsp 12.0 ms
@@ -572,14 +559,13 @@
 
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
-
-    <video class="afterglow" id="myvideo" width="100%"  data-skin="light">
-      <source type="video/mp4" src="videos/1_router_no_ttl_exceeded_message_due_to_busy_control_plane.mp4" />
-    </video>
+        <img class="my_class_fifth freezeframe-responsive" src="images/1_router_no_tx_exceed_response_due_to_busy_controlplane.gif">
+        <button class="start_fifth">start</button>
+        <button class="stop_fifth">stop</button>5a
         <div name="screen">
             $> traceroute 10.10.0.10
             <br> 1 &nbsp *
-            <br> 2 &nbsp 10.10.0.10 &nbsp &nbsp 4.0 ms
+            <br> 2 &nbsp 10.10.0.10 &nbsp &nbsp 20 ms
         </div>
         <br> Note: there is no delay in any of the packets passing <strong>through</strong> router 1.
     </div>
@@ -618,15 +604,14 @@
             <li>The 3rd packet arrives at router 1, TTL -1, forwarded to router 2, TTL -1, forwarded to destination computer 10.10.0.10</li>
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
-    <video class="afterglow" id="myvideo" width="100%"  data-skin="light">
-      <source type="video/mp4" src="videos/2_routers_no_ttl_exceeded_message_from_first_router_due_to_busy_control_plane.mp4" />
-    </video>
-
+        <img class="my_class_fifth freezeframe-responsive" src="images/2-routers-dropped-response.gif">
+        <button class="start_fifth">start</button>
+        <button class="stop_fifth">stop</button>5b
         <div name="screen">
             $> traceroute 10.10.0.10
             <br> 1 &nbsp *
-            <br> 2 &nbsp 10.10.0.1 &nbsp &nbsp 4.0 ms
-            <br> 3 &nbsp 10.10.0.10 &nbsp &nbsp6.0 ms
+            <br> 2 &nbsp 10.10.10.1 &nbsp &nbsp 5.0 ms
+            <br> 3 &nbsp 10.10.0.10 &nbsp &nbsp7.5 ms
             <br>
         </div>
         <br> Note: there is no delay in any of the packets passing <strong>through</strong> router 1.
@@ -660,13 +645,13 @@
 
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
-    <video class="afterglow" id="myvideo" width="100%"  data-skin="light">
-      <source type="video/mp4" src="videos/1-router-delayed-ttl-exceeded-message-due-to-busy-control-plane.mp4" />
-    </video>
+        <img class="my_class_sixth freezeframe-responsive" src="images/1_router_delay_tx_exceed_response_due_to_busy_controlplane.gif">
+        <button class="start_sixth">start</button>
+        <button class="stop_sixth">stop</button>6a
         <div name="screen">
             $> traceroute 10.10.0.10
-            <br> 1 &nbsp 192.168.0.1 &nbsp &nbsp30.0 ms
-            <br> 2 &nbsp 10.10.0.10 &nbsp &nbsp &nbsp4.0 ms
+            <br> 1 &nbsp 192.168.0.1 &nbsp &nbsp30 ms
+            <br> 2 &nbsp 10.10.0.10 &nbsp &nbsp 20 ms
             <br>
         </div>
         <br> Note: there is no delay in any of the packets passing <strong>through</strong> router 1.
@@ -682,7 +667,7 @@
             <li>The 1st packet arrives at the router 1 with a destination of 10.10.0.10</li>
             <li>Router 1 decrements the TTL by 1</li>
             <li>The 1st packet has now expired on router 1</li>
-            <li>The control plane of Router 1 is busy and there is a delay while it completes other tasks (such as updating route tables, compressing log files etc..)</li>
+            <li>The control plane of Router 1 is busy and there is a delay while it completes other tasks (updating route tables, compressing log files etc..)</li>
             <li>Router 1 generates an ICMP Time-to-Live Exceeded (Type 11), TTL equal 0 during transit (Code 0)</li>
             <li>The message will have the router 1 IP address as the source address</li>
             <li>Router 1 sends the message back to the original source IP
@@ -707,14 +692,14 @@
             <li>The 3rd packet arrives at router 1, TTL -1, forwarded to router 2, TTL -1, forwarded to destination computer 10.10.0.10</li>
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
-    <video class="afterglow" id="myvideo" width="100%"  data-skin="light">
-      <source type="video/mp4" src="videos/2-routers-delayed-ttl-exceeded-message-from-first-router-due-to-busy-control-plane.mp4" />
-    </video>
+        <img class="my_class_sixth freezeframe-responsive" src="images/2-routers-delayed-by-first-router.gif">
+        <button class="start_sixth">start</button>
+        <button class="stop_sixth">stop</button>6b
         <div name="screen">
             $> traceroute 10.10.0.10
-            <br> 1 &nbsp 192.168.0.1 &nbsp 30.0 ms
-            <br> 2 &nbsp 10.10.0.1 &nbsp&nbsp &nbsp 4.0 ms
-            <br> 3 &nbsp 10.10.0.10 &nbsp &nbsp 6.0 ms
+            <br> 1 &nbsp 192.168.0.1 &nbsp &nbsp7.0 ms
+            <br> 2 &nbsp 10.10.10.1 &nbsp &nbsp 5.0 ms
+            <br> 3 &nbsp 10.10.0.10 &nbsp &nbsp 7.5 ms
             <br>
         </div>
         <br> Note: there is no delay in any of the packets passing <strong>through</strong> router 1.
@@ -737,10 +722,9 @@
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
         <img src="images/traceroute-crt-term.png" width="500">
-    <video class="afterglow" id="myvideo" width="100%"  data-skin="light">
-      <source type="video/mp4" src="videos/divergent paths-second-save-with-animations-and-crt-test-watermark.mp4" />
-    </video>
-
+        <button class="start_divergent_paths">start</button>
+        <button class="stop_divergent_paths">stop</button>divergent paths
+        <img class="my_class_divergent_paths freezeframe-responsive" src="images/divergent-paths-traceroute-with-crt-round-corners.gif">
         <br>
         <br>
     </div>

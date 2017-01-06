@@ -14,5 +14,50 @@
     <video class="afterglow" id="myvideo" width="1280" height="720" data-skin="light" data-autoresize="fit">
       <source type="video/mp4" src="videos/2-routers-dropped-response-december-2016.mp4" />
     </video>
+    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
+      <source type="video/mp4" src="videos/2-routers-ideal-situation.mp4" />
+    </video>
+    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+        In this example we have 2 routers between the source computer and the destination computer.
+        <ol>
+            <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.0.10</li>
+            <li>The 1st packet arrives at the router 1 with a destination of 10.10.0.10</li>
+            <li>Router 1 decrements the TTL by 1</li>
+            <li>The 1st packet has now expired on router 1</li>
+            <li>Router 1 generates an ICMP Time-to-Live Exceeded (Type 11), TTL equal 0 during transit (Code 0)</li>
+            <li>The message will have the router 1 IP addess as the source address</li>
+            <li>Router 1 sends the message back to the original source IP 192.168.0.10
+                <br>
+                <br>
+            </li>
+
+            <li>The source computer generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.0.10</li>
+            <li>The 2nd packet arrives at the router 1 with a destination of 10.10.0.10 </li>
+            <li>Router 1 decrements the TTL by 1</li>
+            <li>Router 1 forwards the packet to router 2</li>
+            <li>Router 2 decrements the TTL by 1</li>
+            <li>The 2nd packet has now expired on router 2</li>
+            <li>Router 2 generates an ICMP Time-to-Live Exceeded (Type 11), TTL equal 0 during transit (Code 0)</li>
+            <li>The message will have the routers 2 IP address as the source address</li>
+            <li>Router 2 sends the message back to the original source IP
+                <br>
+                <br>
+            </li>
+
+            <li>The source computer generates and sends a packet with the TTL set to 3 and a destination IP address of 10.10.0.10</li>
+            <li>The 3rd packet arrives at router 1, TTL -1, forwarded to router 2, TTL -1, forwarded to destination computer 10.10.0.10</li>
+            <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
+        </ol>
+    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
+      <source type="video/mp4" src="videos/2-routers-ideal-situation.mp4" />
+    </video>
+        <div name="screen">
+            $> traceroute 10.10.0.10
+            <br> 1 &nbsp 192.168.0.1 &nbsp 2.0 ms
+            <br> 2 &nbsp 10.10.10.1 &nbsp &nbsp4.0 ms
+            <br> 3 &nbsp 10.10.0.10 &nbsp &nbsp6.0 ms
+            <br>
+        </div>
+    </div>
   </body>
 </html>
