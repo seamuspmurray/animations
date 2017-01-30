@@ -5,200 +5,15 @@
     <meta charset="utf-8">
     <title>traceroute</title>
 
-    <!-- local -->
-    <link rel="stylesheet" href="build/css/freezeframe_styles.css">
-    <script type="text/javascript" src="src/js/vendor/jquery-2.1.4.js"></script>
-    <script type="text/javascript" src="src/js/vendor/imagesloaded.pkgd.js"></script>
-    <script type="text/javascript" src="src/js/freezeframe.js"></script>
+
+
     <script type="text/javascript" src="afterglow.min.js"></script>
 
-
-    <script type="text/javascript">
-        $(function() {
-
-
-
-            all_good_good_just_hosts = new freezeframe('.my_class_all_good_good_just_hosts').capture().setup();
-
-            $('.start_all_good_good_just_hosts').click(function(e) {
-                e.preventDefault();
-                all_good_good_just_hosts.trigger();
-            });
-
-            $('.stop_all_good_good_just_hosts').click(function(e) {
-                e.preventDefault();
-                all_good_good_just_hosts.release();
-            });
-
-
-            all_good_no_ttl_shown = new freezeframe('.my_class_all_good_no_ttl_shown').capture().setup();
-
-            $('.start_all_good_no_ttl_shown').click(function(e) {
-                e.preventDefault();
-                all_good_no_ttl_shown.trigger();
-            });
-
-            $('.stop_all_good_no_ttl_shown').click(function(e) {
-                e.preventDefault();
-                all_good_no_ttl_shown.release();
-            });
-
-
-
-            reason_for_ttl_traceroute = new freezeframe('.my_class_reason_for_ttl_traceroute').capture().setup();
-
-            $('.start_reason_for_ttl_traceroute').click(function(e) {
-                e.preventDefault();
-                reason_for_ttl_traceroute.trigger();
-            });
-
-            $('.stop_reason_for_ttl_traceroute').click(function(e) {
-                e.preventDefault();
-                reason_for_ttl_traceroute.release();
-            });
-
-            first = new freezeframe('.my_class_first').capture().setup();
-
-            $('.start_first').click(function(e) {
-                e.preventDefault();
-                first.trigger();
-            });
-
-            $('.stop_first').click(function(e) {
-                e.preventDefault();
-                first.release();
-            });
-
-            second = new freezeframe('.my_class_second').capture().setup();
-
-            $('.start_second').click(function(e) {
-                e.preventDefault();
-                second.trigger();
-            });
-
-            $('.stop_second').click(function(e) {
-                e.preventDefault();
-                second.release();
-            });
-
-            third = new freezeframe('.my_class_third').capture().setup();
-
-            $('.start_third').click(function(e) {
-                e.preventDefault();
-                third.trigger();
-            });
-
-            $('.stop_third').click(function(e) {
-                e.preventDefault();
-                third.release();
-            });
-
-            fourth = new freezeframe('.my_class_fourth').capture().setup();
-
-            $('.start_fourth').click(function(e) {
-                e.preventDefault();
-                fourth.trigger();
-            });
-
-            $('.stop_fourth').click(function(e) {
-                e.preventDefault();
-                fourth.release();
-            });
-
-            fifth = new freezeframe('.my_class_fifth').capture().setup();
-
-            $('.start_fifth').click(function(e) {
-                e.preventDefault();
-                fifth.trigger();
-            });
-
-            $('.stop_fifth').click(function(e) {
-                e.preventDefault();
-                fifth.release();
-            });
-
-            sixth = new freezeframe('.my_class_sixth').capture().setup();
-
-            $('.start_sixth').click(function(e) {
-                e.preventDefault();
-                sixth.trigger();
-            });
-
-            $('.stop_sixth').click(function(e) {
-                e.preventDefault();
-                sixth.release();
-            });
-
-            seventh = new freezeframe('.my_class_seventh').capture().setup();
-
-            $('.start_seventh').click(function(e) {
-                e.preventDefault();
-                seventh.trigger();
-            });
-
-            $('.stop_seventh').click(function(e) {
-                e.preventDefault();
-                seventh.release();
-            });
-
-            eighth = new freezeframe('.my_class_eighth').capture().setup();
-
-            $('.start_eighth').click(function(e) {
-                e.preventDefault();
-                eighth.trigger();
-            });
-
-            $('.stop_eighth').click(function(e) {
-                e.preventDefault();
-                eighth.release();
-            });
-
-            nineth = new freezeframe('.my_class_nineth').capture().setup();
-
-            $('.start_nineth').click(function(e) {
-                e.preventDefault();
-                nineth.trigger();
-            });
-
-            $('.stop_nineth').click(function(e) {
-                e.preventDefault();
-                nineth.release();
-            });
-
-
-            infinite_loop = new freezeframe('.my_class_infinite_loop').capture().setup();
-
-            $('.start_infinite_loop').click(function(e) {
-                e.preventDefault();
-                infinite_loop.trigger();
-            });
-
-            $('.stop_infinite_loop').click(function(e) {
-                e.preventDefault();
-                infinite_loop.release();
-            });
-
-
-            divergent_paths = new freezeframe('.my_class_divergent_paths').capture().setup();
-
-            $('.start_divergent_paths').click(function(e) {
-                e.preventDefault();
-                divergent_paths.trigger();
-            });
-
-            $('.stop_divergent_paths').click(function(e) {
-                e.preventDefault();
-                divergent_paths.release();
-            });
-
-
-        })
-    </script>
+   
 
     <style type="text/css">
         body {
             text-align: left;
-            max-width: 1000px;
             margin: 0px auto;
             padding: 20px;
             color: #202020;
@@ -212,20 +27,7 @@
             text-align: left;
             padding: 10px 0px;
         }
-        button {
-            font-family: monospace;
-            text-align: center;
-            width: 100px;
-            margin: 0px 10px 10px 0px;
-            padding: 5px 0px;
-            border: 1px solid #000;
-            background: #fff;
-            outline: none;
-        }
-        button:active {
-            background: #000;
-            color: #fff;
-        }
+        
         .bold {
             font-weight: 700;
         }
@@ -242,7 +44,29 @@
             font-size: 20px;
             display: inline-block;
         }
+
+
+
+
+.vjs-afterglow-skin.afterglow-skin-light .vjs-control-bar {
+    background-color: rgba(255, 255, 255, 0.9);
+    bottom: 0;
+    height: 1px;
+}
+
+.vjs-afterglow-skin.vjs-has-started .vjs-control-bar {
+    display: block;
+    opacity: 0.1;
+    transition: visibility 0.1s ease 0s, opacity 0.1s ease 0s;
+    visibility: visible;
+}
+
+
+
+
     </style>
+
+<script src="//cdn.sc.gl/videojs-hotkeys/0.2/videojs.hotkeys.min.js"></script>
 
 </head>
 
@@ -291,7 +115,7 @@
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
 
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
+    <video class="afterglow" id="reason_for_ttl-all-good-just-two-hosts-no-routers" width="900"  data-skin="light">
       <source type="video/mp4" src="videos/reason_for_ttl-all-good-just-two-hosts-no-routers.mp4" />
     </video>
         <br>
@@ -304,7 +128,7 @@
     
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
 
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
+    <video class="afterglow" id="reason_for_ttl-all-good-two-hosts-two-routers-no-routetable" width="900"  data-skin="light">
       <source type="video/mp4" src="videos/reason_for_ttl-all-good-two-hosts-two-routers-no-routetable.mp4" />
     </video>
         <br>
@@ -318,7 +142,7 @@
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
 
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
+    <video class="afterglow" id="reason_for_ttl-all-good-two-hosts-two-routers-with-routetables" width="900"  data-skin="light">
       <source type="video/mp4" src="videos/reason_for_ttl-all-good-two-hosts-two-routers-with-routetables.mp4" />
     </video>
         <br>
@@ -334,7 +158,7 @@
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
 
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
+    <video class="afterglow" id="reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables-icmp-ttl-exceeded" width="900"  data-skin="light">
       <source type="video/mp4" src="videos/reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables-icmp-ttl-exceeded.mp4" />
     </video>
         <br>
@@ -348,7 +172,7 @@
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
 
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
+    <video class="afterglow" id="reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables-icmp-ttl-exceeded" width="900"  data-skin="light">
       <source type="video/mp4" src="videos/reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables-icmp-ttl-exceeded.mp4" />
     </video>
         <br>
@@ -362,7 +186,7 @@
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
 
-    <video class="afterglow" id="myvideo" width="900" height="500" data-skin="light">
+    <video class="afterglow" id="reason_for_ttl_traceroute_ttl_all" width="900" data-skin="dark">
       <source type="video/mp4" src="videos/reason_for_ttl_traceroute_ttl_all_3.mp4" />
     </video>
         <br>
@@ -386,7 +210,7 @@
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
         This is an overview of what just happened in the previous animation.
 
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
+    <video class="afterglow" id="traceroute-arrows" width="900" data-skin="dark" >
       <source type="video/mp4" src="videos/traceroute-arrows.mp4" />
     </video>
         
@@ -411,7 +235,7 @@
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
 
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
+    <video class="afterglow" id="1_router_pass_through" width="904" height="752" data-skin="light">
       <source type="video/mp4" src="videos/1_router_pass_through.mp4" />
     </video>
 
@@ -448,7 +272,7 @@
             <li>The computer on the right (10.10.0.10) sends the reply to the source computer.</li>
         </ol>
         
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
+    <video class="afterglow" id="1_router_ideal_situation" width="900"  data-skin="light">
       <source type="video/mp4" src="videos/1_router_ideal_situation.mp4" />
     </video>
         <div name="screen">
@@ -493,7 +317,7 @@
             <li>The 3rd packet arrives at router 1, TTL -1, forwarded to router 2, TTL -1, forwarded to destination computer 10.10.0.10</li>
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
+    <video class="afterglow" id="2-routers-ideal-situation" width="900"  data-skin="light">
       <source type="video/mp4" src="videos/2-routers-ideal-situation.mp4" />
     </video>
         <div name="screen">
@@ -514,7 +338,7 @@
         <br> The traceroute results are similar to the previous example except for the value of the router 1 delay is added to each query.
         <br>
 
-    <video class="afterglow" id="myvideo" width="900"  data-skin="light">
+    <video class="afterglow" id="1_router_slow_fastplane" width="900"  data-skin="light">
       <source type="video/mp4" src="videos/1_router_slow_fastplane.mp4" />
     </video>
         <div name="screen">
@@ -533,7 +357,7 @@
         <br> Each packet that is sent though router 1 is delayed.
         <br> The traceroute results are similar to the previous example except for the value of the router 1 delay is added to each query.
         <br>
-    <video class="afterglow" id="myvideo" width="100%"  data-skin="light">
+    <video class="afterglow" id="2-routers-latency-induced-by-the-fast-plane-of-first-router" width="900"  data-skin="light">
       <source type="video/mp4" src="videos/2-routers-latency-induced-by-the-fast-plane-of-first-router.mp4" />
     </video>
         <div name="screen">
@@ -573,7 +397,7 @@
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
 
-    <video class="afterglow" id="myvideo" width="100%"  data-skin="light">
+    <video class="afterglow" id="1_router_no_ttl_exceeded_message_due_to_busy_control_plane" width="900"  data-skin="light">
       <source type="video/mp4" src="videos/1_router_no_ttl_exceeded_message_due_to_busy_control_plane.mp4" />
     </video>
         <div name="screen">
@@ -618,7 +442,7 @@
             <li>The 3rd packet arrives at router 1, TTL -1, forwarded to router 2, TTL -1, forwarded to destination computer 10.10.0.10</li>
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
-    <video class="afterglow" id="myvideo" width="100%"  data-skin="light">
+    <video class="afterglow" id="2_routers_no_ttl_exceeded_message_from_first_router_due_to_busy_control_plane" width="900"  data-skin="light">
       <source type="video/mp4" src="videos/2_routers_no_ttl_exceeded_message_from_first_router_due_to_busy_control_plane.mp4" />
     </video>
 
@@ -660,7 +484,7 @@
 
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
-    <video class="afterglow" id="myvideo" width="100%"  data-skin="light">
+    <video class="afterglow" id="1-router-delayed-ttl-exceeded-message-due-to-busy-control-plane" width="900"  data-skin="light">
       <source type="video/mp4" src="videos/1-router-delayed-ttl-exceeded-message-due-to-busy-control-plane.mp4" />
     </video>
         <div name="screen">
@@ -707,7 +531,7 @@
             <li>The 3rd packet arrives at router 1, TTL -1, forwarded to router 2, TTL -1, forwarded to destination computer 10.10.0.10</li>
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
-    <video class="afterglow" id="myvideo" width="100%"  data-skin="light">
+    <video class="afterglow" id="2-routers-delayed-ttl-exceeded-message-from-first-router-due-to-busy-control-plane" width="900"  data-skin="light">
       <source type="video/mp4" src="videos/2-routers-delayed-ttl-exceeded-message-from-first-router-due-to-busy-control-plane.mp4" />
     </video>
         <div name="screen">
@@ -737,9 +561,10 @@
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
         <img src="images/traceroute-crt-term.png" width="500">
-        <button class="start_divergent_paths">start</button>
-        <button class="stop_divergent_paths">stop</button>divergent paths
-        <img class="my_class_divergent_paths freezeframe-responsive" src="images/divergent-paths-traceroute-with-crt-round-corners.gif">
+    <video class="afterglow" id="divergent-paths-second-save-with-animations-and-crt-test-watermark" width="900" >
+      <source type="video/mp4" src="videos/divergent paths-second-save-with-animations-and-crt-test-watermark.mp4" />
+    </video>
+
         <br>
         <br>
     </div>
