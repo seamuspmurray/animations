@@ -58,7 +58,7 @@
     display: block;
     opacity: 0.3;
     transition: visibility 0.1s ease 0s, opacity 0.1s ease 0s;
-    visibility: visible;
+    isibility: visible;
 }
 
 .vjs-afterglow-skin.afterglow-skin-light .vjs-top-control-bar .vjs-button {
@@ -78,7 +78,7 @@
 </head>
 
 <body>
-    LastUpdate 2017 01 31 01:52 by Seamus Murray
+    LastUpdate 2017 01 31 21:27 by Seamus Murray
     <br>
     <br>
 
@@ -88,37 +88,31 @@
     <br> Create 3 separate html pages. 
     <p></p>
     
-     <h1>An animated exposition of traceroute and suppositious packetloss</h1> 
+     <h1>An animated exposition of supositious packetloss and latency indicated by traceroute and releated tools.</h1> 
+     <h1>An animated explanation of false packetloss and latency indicated by traceroute and related tools.</h1> 
     <br> Introduction
 
-    <br> The purpose of this presentation is to clarify some of the concepts and also to correct some of the common misconceptions about traceroute and its related tools.
-    <br> This talk is not geared towards educating experienced network administrators on how routing works.
-    <br> The presentation will take approximately 45-60 minutes
-    <br> I will use numerous animations to illustrate the various concepts.
-    <br> Throughout all of the examples we will be using 2 hosts.
-    <br> One of the left hand side of the screen and one on the right hand side.
-    <br> All of the traceroutes will be initiated from the host on the left.
-    <br> During the session I will cover the following topics.
-    <br>
+    <br> The purpose of this presentation is to clarify some of the concepts and also to correct some of the common misconceptions about traceroute and its related tools. 
+
+    <br> I will use numerous animations to illustrate the various concepts and topics including...  
     <ol>
         <li>Routers and Route Tables</li>
-        <li>TTL (Time to Live) </li>
+        <li>TTL (Time to Live)</li>
         <li>ICMP Time Exceeded messages</li>
-        <li>How traceroute utilises the TTL and ICMP TTL Exceeded messages to determine the path to a remote network node</li>
+        <li>Traceroute's utilisation of TTL and ICMP Time Exceeded messages to determine routing paths</li>
         <li>3 common types of traceroutes - ICMP, UDP and TCP</li>
         <li>The primary and secondary function of routers</li>
-        <li>How the limitations and priorities of routers affect the outputs/reports displayed in traceroute tools</li>
-        <li>Routing Paths: Asymmetric paths, divergent paths</li>
-        <li>How Asymmetric and divergent paths affect the outputs/reports displayed in traceroute tools</li>
+        <li>Effects of router prioritisation on the outputs/reports displayed in traceroute tools</li>
+        <li>Routing Paths: Symmetric, Asymmetric and Divergent paths</li>
+        <li>Effects of Asymmetric and divergent paths on the outputs/reports displayed in traceroute tools</li>
     </ol>
 
 
-    The IP addresses used in the following demonstration are not important, I have merely added them to aid the understanding.
 
 
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-
+    <h3>2 hosts communicating</h3>
     <video class="afterglow" 
            id="reason_for_ttl-all-good-just-two-hosts-no-routers" width="960"  height="272" data-skin="light"
                             poster="videos/reason_for_ttl-all-good-just-two-hosts-no-routers.png">
@@ -130,12 +124,12 @@
         <br> On the left we have 192.168.0.10
         <br> On the right we have 10.10.0.10
         <br>
-reason_for_ttl-all-good-just-two-hosts-no-routers.mp4
+    <small>reason_for_ttl-all-good-just-two-hosts-no-routers.mp4</small>
     </div>
 
     
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-
+    <h3>2 hosts communicating via 2 routers</h3>
     <video class="afterglow" id="reason_for_ttl-all-good-two-hosts-two-routers-no-routetable" width="960"  height="272" data-skin="light" 
                             poster="videos/reason_for_ttl-all-good-two-hosts-two-routers-no-routetable.png">
       <source type="video/ogg" src="videos/reason_for_ttl-all-good-two-hosts-two-routers-no-routetable.ogg" />
@@ -144,15 +138,29 @@ reason_for_ttl-all-good-just-two-hosts-no-routers.mp4
         <br>
         <br>In this example we have 2 routers between the 2 hosts.
         <br>
-reason_for_ttl-all-good-two-hosts-two-routers-no-routetable.mp4
+    <small>reason_for_ttl-all-good-two-hosts-two-routers-no-routetable.mp4</small>
     </div>
 
-
-
+   <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <h3>Demonstration of route tables in action</h3>
+    <video class="afterglow" id="reason_for_ttl-all-good-two-hosts-two-routers-with-routetables" width="960"  height="272" data-skin="light" 
+                            poster="videos/reason_for_ttl-all-good-two-hosts-two-routers-with-routetables.png">
+      <source type="video/ogg" src="videos/reason_for_ttl-all-good-two-hosts-two-routers-with-routetables.ogg" />
+      <source type="video/mp4" src="videos/reason_for_ttl-all-good-two-hosts-two-routers-with-routetables.mp4" />
+    </video>
+        <br>
+        <br>Each node on a TCP/IP network uses Route tables to determine the direction in which to send/forward packets
+        <br> In the following examples we use some very simple route tables.
+        <br> The 2 hosts only have a single route entry each
+        <br> The 2 routers have just 2 route entries each
+        <br>
+    <small>reason_for_ttl-all-good-two-hosts-two-routers-with-routetables.mp4</small>
+    </div>
 
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
 
+    <h3>Demonstration of a routing loop</h3>
     <video class="afterglow" id="reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables" width="960"  height="272" data-skin="light"
                             poster="videos/reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables.png">
       <source type="video/ogg" src="videos/reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables.ogg" />
@@ -162,14 +170,14 @@ reason_for_ttl-all-good-two-hosts-two-routers-no-routetable.mp4
         <br> In this example router A has a route entry that states that traffic destined to the 10.10.0.0 network should be sent to Router B.
         <br> However router B has a route entry that states that traffic destined to the 10.10.0.0 network should be sent to Router A.
         <br>
-reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables.mp4
+    <small>reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables.mp4</small>
     </div>
 
 
 
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-
+    <h3>Demonstration of the purpose of TTL and its effects dudring routing loops</h3>
     <video class="afterglow" id="reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables-icmp-ttl-exceeded" width="960"  height="272" data-skin="light"
                             poster="videos/reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables-icmp-ttl-exceeded.png">
       <source type="video/ogg" src="videos/reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables-icmp-ttl-exceeded.ogg" />
@@ -179,14 +187,14 @@ reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables.mp4
         <br>To prevent packets from being forwarded indefinitely, each packet is assigned a TTL by the source node that generates the packet, each time the packet is forwarded though router the value of the TTL is decremented by 1.
         <br> Routers will not forward packets if their TTL has expired, ideally routers should send a message back to the source host notifying it that the TTL was exceeded. This message is sent in an ICMP TTL Exceeded packet.
         <br>
-reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables-icmp-ttl-exceeded.mp4
+       <small>reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables-icmp-ttl-exceeded.mp4</small>
 
     </div>
 
 
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-
+    <h3>Demonstration of traceroute in action</h3>
     <video class="afterglow" id="reason_for_ttl_traceroute_ttl_all" width="960" height="440" data-skin="light"
                             poster="videos/reason_for_ttl_traceroute_ttl_all_3.png">
       <source type="video/ogg" src="videos/reason_for_ttl_traceroute_ttl_all_3.ogg" />
@@ -205,21 +213,20 @@ reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables-icmp-ttl-exc
             <br>
         </div>
         <br>
-reason_for_ttl_traceroute_ttl_all_3.mp4
+    <small>reason_for_ttl_traceroute_ttl_all_3.mp4</small>
     </div>
 
 
 
 
     <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-        This is an overview of what just happened in the previous animation.
-
+    <h3>Overview of traceroute</h3>
     <video class="afterglow" id="traceroute-arrows" width="960" height="360" data-skin="light"
                             poster="videos/traceroute-arrows.png">
       <source type="video/ogg" src="videos/traceroute-arrows.ogg" />
       <source type="video/mp4" src="videos/traceroute-arrows.mp4" />
     </video>
-       videos/traceroute-arrows.mp4 
+    <small>traceroute-arrows.mp4 </small>
         <br>
         <br>
         <img src="images/key-full.png" width="960">
@@ -247,7 +254,7 @@ reason_for_ttl_traceroute_ttl_all_3.mp4
 
         <br>
         <br>
-1_router_pass-through.mp4
+    <small>1_router_pass-through.mp4</small>
     </div>
 
 
@@ -289,7 +296,7 @@ reason_for_ttl_traceroute_ttl_all_3.mp4
             <br> 2 &nbsp; 10.10.0.10 &nbsp; &nbsp;4.0 ms
             <br>
         </div>
-1_router_ideal_situation.mp4
+    <small>2_router_ideal_situation.mp4</small>
     </div>
 
 
@@ -338,7 +345,7 @@ reason_for_ttl_traceroute_ttl_all_3.mp4
             <br> 3 &nbsp; 10.10.0.10 &nbsp; &nbsp;6.0 ms
             <br>
         </div>
-2_routers_ideal-situation.mp4
+    <small>2_routers_ideal-situation.mp4</small>
     </div>
 
 
@@ -361,7 +368,7 @@ reason_for_ttl_traceroute_ttl_all_3.mp4
             <br> 2 &nbsp; 10.10.0.10 &nbsp; &nbsp; 17.0 ms
             <br>
         </div>
-videos/1_router_slow_fastplane.mp4
+    <small>1_router_slow_fastplane.mp4</small>
     </div>
 
 
@@ -384,7 +391,7 @@ videos/1_router_slow_fastplane.mp4
             <br> 3 &nbsp; 10.10.0.10 &nbsp; &nbsp;16.0 ms
             <br>
         </div>
-2_routers_latency-induced-by-the-fast-plane-of-first-router
+    <small>2_routers_latency-induced-by-the-fast-plane-of-first-router</small>
     </div>
 
 
@@ -426,7 +433,7 @@ videos/1_router_slow_fastplane.mp4
             <br> 2 &nbsp; 10.10.0.10 &nbsp; &nbsp; 4.0 ms
         </div>
         <br> Note: there is no delay in any of the packets passing <strong>through</strong> router 1.
-1_router_no-ttl-exceeded-message-due-to-busy-control-plane.mp4
+    <small>1_router_no-ttl-exceeded-message-due-to-busy-control-plane.mp4</small>
     </div>
 
 
@@ -477,6 +484,7 @@ videos/1_router_slow_fastplane.mp4
             <br>
         </div>
         <br> Note: there is no delay in any of the packets passing <strong>through</strong> router 1.
+    <small>2_routers_no_ttl_exceeded_message_from_first_router_due_to_busy_control_plane.mp4</small>
     </div>
     
 
@@ -520,7 +528,7 @@ videos/1_router_slow_fastplane.mp4
             <br>
         </div>
         <br> Note: there is no delay in any of the packets passing <strong>through</strong> router 1.
-1_router_delayed-ttl-exceeded-message-due-to-busy-control-plane.png
+    <small>1_router_delayed-ttl-exceeded-message-due-to-busy-control-plane.mp4</small>
     </div>
 
 
@@ -571,7 +579,7 @@ videos/1_router_slow_fastplane.mp4
             <br>
         </div>
         <br> Note: there is no delay in any of the packets passing <strong>through</strong> router 1.
-2_routers_delayed-ttl-exceeded-message-from-first-router-due-to-busy-control-plane.mp4
+    <small>2_routers_delayed-ttl-exceeded-message-from-first-router-due-to-busy-control-plane.mp4</small>
     </div>
 
 
@@ -601,9 +609,9 @@ videos/1_router_slow_fastplane.mp4
       <source type="video/ogg" src="videos/asymmetric_routing_paths.ogg" />
       <source type="video/mp4" src="videos/asymmetric_routing_paths.mp4" />
     </video>
-
         <br>
         <br>
+    <small>asymmetric_routing_paths.mp4</small>
     </div>
 
 
