@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -11,74 +11,26 @@
 
    
 
-    <style type="text/css">
-        body {
-            text-align: left;
-            margin: 0px auto;
-            padding: 20px;
-            color: #202020;
-            font-size: 13px;
-        }
-        a {
-            color: #202020;
-        }
-        p {
-            font-family: monospace;
-            text-align: left;
-            padding: 10px 0px;
-        }
-        
-        .bold {
-            font-weight: 700;
-        }
-        .italic {
-            font-style: italic;
-        }
-        .screen{
-            background-color: black;
-            color: white;
-            padding: 25px;
-            border: 10px solid white;
-            margin: 25px;
-            font-family: "Courier New";
-            font-size: 20px;
-            display: inline-block;
-        }
+<link rel="stylesheet" type="text/css" href="myStyle.css">
 
-
-
-
-.vjs-afterglow-skin.afterglow-skin-light .vjs-control-bar {
-    background-color: rgba(255, 255, 255, 0.9);
-    bottom: 0;
-    height: 1px;
+<style>
+ table {
+    border-collapse: collapse;
 }
-
-.vjs-afterglow-skin.vjs-has-started .vjs-control-bar {
-    display: block;
-    opacity: 0.3;
-    transition: visibility 0.1s ease 0s, opacity 0.1s ease 0s;
-    isibility: visible;
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    max-width:100%;
+    white-space:nowrap;
 }
-
-.vjs-afterglow-skin.afterglow-skin-light .vjs-top-control-bar .vjs-button {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 50px;
-    height: 32px;
-    margin-left: 7px;
-    width: 32px;
-    opacity: 0.3;
-}
-
-
-    </style>
+</style>
 
 <!-- <script src="//cdn.sc.gl/videojs-hotkeys/0.2/videojs.hotkeys.min.js"></script> -->
 
 </head>
 
 <body>
-    LastUpdate 2017 03 03 00:27 by Seamus Murray
+    LastUpdate 2017 02 05 22:20 by Seamus Murray
     <br>
     <br>
 
@@ -101,7 +53,7 @@
         <li>ICMP Time Exceeded messages</li>
         <li>Traceroute's utilisation of TTL and ICMP Time Exceeded messages to determine routing paths</li>
         <li>3 common types of traceroutes - ICMP, UDP and TCP</li>
-        <li>The primary and secondary function of routers</li>
+        <li>The primary and secondary functions of routers</li>
         <li>Effects of router prioritisation on the outputs/reports displayed in traceroute tools</li>
         <li>Routing Paths: Symmetric, Asymmetric and Divergent paths</li>
         <li>Effects of Asymmetric and divergent paths on the outputs/reports displayed in traceroute tools</li>
@@ -109,14 +61,14 @@
 
 
 
+<hr>
+<h1> Brief overview of routers</h1>
 
-
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <div class="myDiv">
     <h3>2 hosts communicating</h3>
     <video class="afterglow" 
-           id="reason_for_ttl-all-good-just-two-hosts-no-routers" width="960"  height="272" data-skin="light"
+           id="reason_for_ttl-all-good-just-two-hosts-no-routers" width="960" height="272" data-skin="light" data-autoresize="fit"
                             poster="videos/reason_for_ttl-all-good-just-two-hosts-no-routers.png">
-      <source type="video/ogg" src="videos/reason_for_ttl-all-good-just-two-hosts-no-routers.ogg" />
       <source type="video/mp4" src="videos/reason_for_ttl-all-good-just-two-hosts-no-routers.mp4" />
     </video>
         <br>
@@ -128,11 +80,10 @@
     </div>
 
     
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <div class="myDiv">
     <h3>2 hosts communicating via 2 routers</h3>
-    <video class="afterglow" id="reason_for_ttl-all-good-two-hosts-two-routers-no-routetable" width="960"  height="272" data-skin="light" 
+    <video class="afterglow" id="reason_for_ttl-all-good-two-hosts-two-routers-no-routetable" width="960" height="272" data-skin="light" data-autoresize="fit"
                             poster="videos/reason_for_ttl-all-good-two-hosts-two-routers-no-routetable.png">
-      <source type="video/ogg" src="videos/reason_for_ttl-all-good-two-hosts-two-routers-no-routetable.ogg" />
       <source type="video/mp4" src="videos/reason_for_ttl-all-good-two-hosts-two-routers-no-routetable.mp4" />
     </video>
         <br>
@@ -141,11 +92,10 @@
     <small>reason_for_ttl-all-good-two-hosts-two-routers-no-routetable.mp4</small>
     </div>
 
-   <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+   <div class="myDiv">
     <h3>Demonstration of route tables in action</h3>
-    <video class="afterglow" id="reason_for_ttl-all-good-two-hosts-two-routers-with-routetables" width="960"  height="272" data-skin="light" 
+    <video class="afterglow" id="reason_for_ttl-all-good-two-hosts-two-routers-with-routetables" width="960" height="272" data-skin="light" data-autoresize="fit"
                             poster="videos/reason_for_ttl-all-good-two-hosts-two-routers-with-routetables.png">
-      <source type="video/ogg" src="videos/reason_for_ttl-all-good-two-hosts-two-routers-with-routetables.ogg" />
       <source type="video/mp4" src="videos/reason_for_ttl-all-good-two-hosts-two-routers-with-routetables.mp4" />
     </video>
         <br>
@@ -158,12 +108,10 @@
     </div>
 
 
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-
+    <div class="myDiv">
     <h3>Demonstration of a routing loop</h3>
-    <video class="afterglow" id="reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables" width="960"  height="272" data-skin="light"
+    <video class="afterglow" id="reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables" width="960"  height="272" data-skin="light" data-autoresize="fit"
                             poster="videos/reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables.png">
-      <source type="video/ogg" src="videos/reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables.ogg" />
       <source type="video/mp4" src="videos/reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables.mp4" />
     </video>
         <br>
@@ -176,11 +124,10 @@
 
 
 
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <div class="myDiv">
     <h3>Demonstration of the purpose of TTL and its effects dudring routing loops</h3>
-    <video class="afterglow" id="reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables-icmp-ttl-exceeded" width="960"  height="272" data-skin="light"
+    <video class="afterglow" id="reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables-icmp-ttl-exceeded" width="960"  height="272" data-skin="light" data-autoresize="fit"
                             poster="videos/reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables-icmp-ttl-exceeded.png">
-      <source type="video/ogg" src="videos/reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables-icmp-ttl-exceeded.ogg" />
       <source type="video/mp4" src="videos/reason_for_ttl-routing-loop-two-hosts-two-routers-with-route-tables-icmp-ttl-exceeded.mp4" />
     </video>
         <br>
@@ -193,11 +140,10 @@
 
 
 
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <div class="myDiv">
     <h3>Demonstration of traceroute in action</h3>
-    <video class="afterglow" id="reason_for_ttl_traceroute_ttl_all" width="960" height="440" data-skin="light"
+    <video class="afterglow" id="reason_for_ttl_traceroute_ttl_all" width="960" height="440" data-skin="light" data-autoresize="fit"
                             poster="videos/reason_for_ttl_traceroute_ttl_all_3.png">
-      <source type="video/ogg" src="videos/reason_for_ttl_traceroute_ttl_all_3.ogg" />
       <source type="video/mp4" src="videos/reason_for_ttl_traceroute_ttl_all_3.mp4" />
     </video>
         <br>
@@ -219,11 +165,10 @@
 
 
 
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <div class="myDiv">
     <h3>Overview of traceroute</h3>
-    <video class="afterglow" id="traceroute-arrows" width="960" height="360" data-skin="light"
+    <video class="afterglow" id="traceroute-arrows" width="960" height="360" data-skin="light" data-autoresize="fit"
                             poster="videos/traceroute-arrows.png">
-      <source type="video/ogg" src="videos/traceroute-arrows.ogg" />
       <source type="video/mp4" src="videos/traceroute-arrows.mp4" />
     </video>
     <small>traceroute-arrows.mp4 </small>
@@ -234,9 +179,22 @@
 
 
 
+<hr>
+<h1>The primary and secondary functions of routers</h1>
+
+<div class="myDiv">
+<h1>Routers are made up of various components and systems.</h1>
+        <ol>
+            <li>Network interfaces</li>
+            <li>Memory RAM</li>
+            <li>Persistant storage for the operating system and configuration</li>
+            <li>Powersupply</li>
+        </ol>
+
+</div>
 
 
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <div class="myDiv">
         In This example a packet is routed / passed though the router.
         <ol>
             <li>The source computer 192.168.0.10 generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.0.10</li>
@@ -246,9 +204,8 @@
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
 
-    <video class="afterglow" id="1_router_pass_through" width="640" height="540" data-skin="light"
+    <video class="afterglow" id="1_router_pass_through" width="640" height="540" data-skin="light" data-autoresize="fit"
                             poster="videos/1_router_pass-through.png">
-      <source type="video/ogg" src="videos/1_router_pass-through.ogg" />
       <source type="video/mp4" src="videos/1_router_pass-through.mp4" />
     </video>
 
@@ -260,7 +217,7 @@
 
 
 
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <div class="myDiv">
         In this example the computer on the left is performing a traceroute to the computer on the right (10.10.0.10)..
         <ol>
             <li>The source computer 192.168.0.10 generates and sends a packet with the TTL set to 2 and a destination IP address of 10.10.0.10</li>
@@ -285,9 +242,8 @@
             <li>The computer on the right (10.10.0.10) sends the reply to the source computer.</li>
         </ol>
         
-    <video class="afterglow" id="1_router_ideal_situation" width="640" height="540" data-skin="light" 
+    <video class="afterglow" id="1_router_ideal_situation" width="640" height="540" data-skin="light" data-autoresize="fit"
                             poster="videos/1_router_ideal-situation.png">
-      <source type="video/ogg" src="videos/1_router_ideal-situation.ogg" />
       <source type="video/mp4" src="videos/1_router_ideal-situation.mp4" />
     </video>
         <div class="screen">
@@ -302,7 +258,7 @@
 
 
 
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <div class="myDiv">
         In this example we have 2 routers between the source computer and the destination computer.
         <ol>
             <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.0.10</li>
@@ -333,9 +289,8 @@
             <li>The 3rd packet arrives at router 1, TTL -1, forwarded to router 2, TTL -1, forwarded to destination computer 10.10.0.10</li>
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
-    <video class="afterglow" id="2_routers_ideal-situation" height="540" width="960"  data-skin="light" 
+    <video class="afterglow" id="2_routers_ideal-situation" height="540" width="960" data-skin="light" data-autoresize="fit"
                             poster="videos/2_routers_ideal-situation.png">
-      <source type="video/ogg" src="videos/2_routers_ideal-situation.ogg" />
       <source type="video/mp4" src="videos/2_routers_ideal-situation.mp4" />
     </video>
         <div class="screen">
@@ -351,15 +306,14 @@
 
 
 
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <div class="myDiv">
         In this example there is latency induced by the single router...
         <br> Each packet that is sent though router 1 is delayed.
         <br> The traceroute results are similar to the previous example except for the value of the router 1 delay is added to each query.
         <br>
 
-    <video class="afterglow" id="1_router_slow_fastplane" height="540" width="640"  data-skin="light" 
+    <video class="afterglow" id="1_router_slow_fastplane" height="540" width="640" data-skin="light" data-autoresize="fit"
                             poster="videos/1_router_slow-fastplane.png">
-      <source type="video/ogg" src="videos/1_router_slow-fastplane.ogg" />
       <source type="video/mp4" src="videos/1_router_slow-fastplane.mp4" />
     </video>
         <div class="screen">
@@ -374,14 +328,13 @@
 
 
 
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <div class="myDiv">
         In this example there is latency induced by router 1...
         <br> Each packet that is sent though router 1 is delayed.
         <br> The traceroute results are similar to the previous example except for the value of the router 1 delay is added to each query.
         <br>
-    <video class="afterglow" id="2_routers_latency-induced-by-the-fast-plane-of-first-router" height="540" width="960"  data-skin="light"
+    <video class="afterglow" id="2_routers_latency-induced-by-the-fast-plane-of-first-router" height="540" width="960" data-skin="light" data-autoresize="fit"
                             poster="videos/2_routers_latency-induced-by-the-fast-plane-of-first-router.png">
-      <source type="video/ogg" src="videos/2_routers_latency-induced-by-the-fast-plane-of-first-router.ogg" />
       <source type="video/mp4" src="videos/2_routers_latency-induced-by-the-fast-plane-of-first-router.mp4" />
     </video>
         <div class="screen">
@@ -395,10 +348,19 @@
     </div>
 
 
+<div class="myDiv">
+<h1>Routers have other tasks to perform besides responding to packets generated by traceroute</h1>
+        <ol>
+            <li>Route traffic from one location to another</li>
+            <li>Build and update route tables</li>
+            <li>Write logs</li>
+            <li>etc...</li>
+        </ol>
+</div>
 
 
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-        In this example router drops expired packets but still routes the non expired packets...
+<div class="myDiv">
+		In this example router drops expired packets but still routes the non expired packets...
         <ol>
             <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.0.10</li>
             <li>The 1st packet arrives at the router 1 with a destination of 10.10.0.10</li>
@@ -422,9 +384,8 @@
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
 
-    <video class="afterglow" id="1_router_no-ttl-exceeded-message-due-to-busy-control-plane" height="540" width="640"  data-skin="light"
+    <video class="afterglow" id="1_router_no-ttl-exceeded-message-due-to-busy-control-plane" height="540" width="640" data-skin="light" data-autoresize="fit"
                             poster="videos/1_router_no-ttl-exceeded-message-due-to-busy-control-plane.png">
-      <source type="video/ogg" src="videos/1_router_no-ttl-exceeded-message-due-to-busy-control-plane.ogg" />
       <source type="video/mp4" src="videos/1_router_no-ttl-exceeded-message-due-to-busy-control-plane.mp4" />
     </video>
         <div class="screen">
@@ -439,7 +400,7 @@
 
 
 
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <div class="myDiv">
         In this example router 1 drops expired packets...
         <ol>
             <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.0.10</li>
@@ -470,10 +431,9 @@
             <li>The 3rd packet arrives at router 1, TTL -1, forwarded to router 2, TTL -1, forwarded to destination computer 10.10.0.10</li>
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
-    <video class="afterglow" id="2_routers_no_ttl_exceeded_message_from_first_router_due_to_busy_control_plane" width="960" height="540" data-skin="light" 
-                             poster="videos/2_routers_no_ttl_exceeded_message_from_first_router_due_to_busy_control_plane.png">
-      <source type="video/ogg"  src="videos/2_routers_no_ttl_exceeded_message_from_first_router_due_to_busy_control_plane.ogg" />
-      <source type="video/mp4"  src="videos/2_routers_no_ttl_exceeded_message_from_first_router_due_to_busy_control_plane.mp4" />
+    <video class="afterglow" id="2_routers_no_ttl-exceeded-message-from-first-router-due-to-busy-control-plane" width="960" height="540" data-skin="light" data-autoresize="fit"
+                             poster="videos/2_routers_no_ttl-exceeded-message-from-first-router-due-to-busy-control-plane.png">
+      <source type="video/mp4"  src="videos/2_routers_no_ttl-exceeded-message-from-first-router-due-to-busy-control-plane.mp4" />
     </video>
 
         <div class="screen">
@@ -485,12 +445,13 @@
         </div>
         <br> Note: there is no delay in any of the packets passing <strong>through</strong> router 1.
     <small>2_routers_no_ttl_exceeded_message_from_first_router_due_to_busy_control_plane.mp4</small>
+    need to run a loop for the stars so that the router is busy when subsequant packets are forwarded
     </div>
     
 
 
 
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <div class="myDiv">
         In this example there is a delay before the router can generate the ICMP Time-to-Live Exceeded message...
         <ol>
             <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.0.10</li>
@@ -516,9 +477,8 @@
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
 
-    <video class="afterglow" id="1_router_delayed-ttl-exceeded-message-due-to-busy-control-plane" height="540" width="640"  data-skin="light"
+    <video class="afterglow" id="1_router_delayed-ttl-exceeded-message-due-to-busy-control-plane" height="540" width="640" data-skin="light" data-autoresize="fit"
                             poster="videos/1_router_delayed-ttl-exceeded-message-due-to-busy-control-plane.png">
-      <source type="video/ogg" src="videos/1_router_delayed-ttl-exceeded-message-due-to-busy-control-plane.ogg" />
       <source type="video/mp4" src="videos/1_router_delayed-ttl-exceeded-message-due-to-busy-control-plane.mp4" />
      </video>
         <div class="screen">
@@ -534,7 +494,7 @@
 
 
 
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <div class="myDiv">
         In this example .
         <ol>
             <li>The source computer generates and sends a packet with the TTL set to 1 and a destination IP address of 10.10.0.10</li>
@@ -566,9 +526,8 @@
             <li>The 3rd packet arrives at router 1, TTL -1, forwarded to router 2, TTL -1, forwarded to destination computer 10.10.0.10</li>
             <li>The destination computer sends the reply to the source computer 192.168.0.10</li>
         </ol>
-    <video class="afterglow" id="2_routers_delayed-ttl-exceeded-message-from-first-router-due-to-busy-control-plane" height="540" width="960"  data-skin="light"
+    <video class="afterglow" id="2_routers_delayed-ttl-exceeded-message-from-first-router-due-to-busy-control-plane" height="540" width="960" data-skin="light" data-autoresize="fit"
                             poster="videos/2_routers_delayed-ttl-exceeded-message-from-first-router-due-to-busy-control-plane.png">
-      <source type="video/ogg" src="videos/2_routers_delayed-ttl-exceeded-message-from-first-router-due-to-busy-control-plane.ogg" />
       <source type="video/mp4" src="videos/2_routers_delayed-ttl-exceeded-message-from-first-router-due-to-busy-control-plane.mp4" />
     </video>
         <div class="screen">
@@ -583,16 +542,17 @@
     </div>
 
 
+<hr>
+<h1>Routing Paths: Symmetric, Asymmetric and Divergent paths</h1>
 
-
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <div class="myDiv">
         <H3>Symmetric Path</h3>
         Idealistic model of symmetric paths between the two hosts (W) and (e).<br>
         <img src="images/asymmetric-paths-imaginary.png" width="950">
     </div>
 
 
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <div class="myDiv">
         <H3>Asymmetric Path</h3>
         The return path is not the same as forward path between the two hosts (W) and (e).<br>
         <img src="images/asymmetric-paths-from-both-sides.png" width="950">
@@ -601,12 +561,11 @@
 
 
 
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <div class="myDiv">
         <H3>Multiple Asymmetric Paths</h3>
         <img src="images/traceroute-crt-term.png" width="500">
-    <video class="afterglow" id="asymmetric_routing_paths" width="960" height="540" data-skin="light" 
+    <video class="afterglow" id="asymmetric_routing_paths" width="960" height="540" data-skin="light" data-autoresize="fit"
                             poster="images/overall-overview-of-asymmetric-routing-paths-redacted.png">
-      <source type="video/ogg" src="videos/asymmetric_routing_paths.ogg" />
       <source type="video/mp4" src="videos/asymmetric_routing_paths.mp4" />
     </video>
         <br>
@@ -617,7 +576,7 @@
 
 
 
-    <div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
+    <div class="myDiv">
         <img src="images/overall-overview-of-asymmetric-routing-paths-fade.png" width="950">
     </div>
 
@@ -628,11 +587,9 @@
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="images/cc-nc-icon.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
-<hl>
-<div style="width: 960px; color: black; background-color: #d9d9d9; border: 2px solid black; padding: 5px; margin: 20px;">
-
-
-Summary:
+<hr>
+<div class="myDiv">
+<h1>Summary:</h1>
 <br>Route paths accross the internet are almost always much more complicated than they seem - therefore it is easy to make misjudgements.
 <br>Concentrate on host to host traffic to determine and measure packeloss and latency
 <br>
@@ -661,24 +618,22 @@ FAQ and extra stuff
 </ul>
 
 <h3>ICMP Time exceeded message format</h3>
-<table cellspacing="0" border="0">
-	<colgroup span="2" width="85"></colgroup>
-	<colgroup width="270"></colgroup>
+<table >
 	<tr>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="17" align="center">00     –     07</td>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center">08     -      15</td>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center">16                   -             31</td>
+		<td>00     –     07</td>
+		<td>08     -      15</td>
+		<td>16                   -             31</td>
 	</tr>
 	<tr>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="17" align="center">Type = 11</td>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center">Code = 0 / 1</td>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center">Header Checksum</td>
+		<td>Type = 11</td>
+		<td>Code = 0 / 1</td>
+		<td>Header Checksum</td>
 	</tr>
 	<tr>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=3 height="17" align="center">Not Used</td>
+		<td colspan="3">Not Used</td>
 		</tr>
 	<tr>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=3 height="17" align="center">IP header and first 64 bits of original datagram's data</td>
+		<td colspan="3">IP header and first 64 bits of original datagram's data</td>
 		</tr>
 </table>
 
